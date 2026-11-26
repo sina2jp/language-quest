@@ -23,14 +23,20 @@ to the boss and the chest, so every session ends on a win. Parent information li
 4. **Ear check:** Family voices → "Ear check (30 clips)": listen, thumbs up or down; every thumbs-down goes into your recording queue.
 5. **Weekly card:** Parent corner → This week (minutes, new "I can" goals, a clip of his voice, a phrase for dinner).
 6. **Backups:** Parent corner → Backup (download weekly; import asks before replacing).
-7. **Farsi spot-check sheet:** a separate review sheet for a native speaker (shared privately, not part of this site).
-   Tick rows, add notes, then "Export my notes".
+7. **Farsi spot-check sheet** (for a native speaker; a separate file, not part of this site). Tick rows, add notes, then
+   "Export my notes".
 
 **Opening it:** use the GitHub Pages site, or double-click `index.html` in the downloaded folder (everything, including
 pictures and Farsi audio, also works from a file on disk; only "install as an app" and offline caching need the website).
 **If something looks wrong:** Parent corner → Install & help → Diagnostics lists any file that failed to load. Adding
 `?debug=1` to the address shows the same list on screen. The kid's screens never show error messages.
 **AI partner:** Parent corner → AI partner → Save key or **Test key** picks the newest available fast (Haiku) model and shows it.
+
+**Secret Treasures:** 18 hidden Gold Skulltula tokens (golden beetles in the Starlit Grove look): 6 hidden things to find
+and 12 hero challenges (most of them in Spanish). Every 3 tokens (your setting) earn a Reward Ticket: he picks a real-world
+reward from your list and shows you the ticket; you approve it with your PIN. Parent corner → Rewards: edit the list,
+tokens per ticket, weekly cap (all apps together) and on/off. The list and tickets are shared with Math Arena and Code Quest
+on the same browser (localStorage `familyApps.rewards.v1` and `familyApps.tickets.v1`).
 
 ## What it teaches
 - **Spanish** (new language, Latin American by default, Spain optional): 20 units, 904 words + 300 phrases,
