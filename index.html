@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<script>(function(){var M="dist";if(M==='preview')window.__LQ_PREVIEW__=true;var D=window.__lqDiag=window.__lqDiag||[];
+var dbg=/[?&]debug=1\b/.test(location.search);
+function el(){var b=document.getElementById('lq-diag');if(b)return b;b=document.createElement('div');b.id='lq-diag';b.setAttribute('role','status');
+if(M==='preview'){b.style.cssText='position:fixed;left:8px;bottom:8px;z-index:99999;font:12px/1.4 system-ui,sans-serif;max-width:min(560px,92vw)';}
+else{b.style.cssText='position:fixed;left:8px;right:8px;bottom:8px;z-index:99999;max-height:40vh;overflow:auto;background:#3a1208;color:#ffe3d6;border:2px solid #ff9f7a;border-radius:10px;padding:8px 10px;font:12px/1.4 monospace;white-space:pre-wrap';}
+(document.body||document.documentElement).appendChild(b);return b;}
+var open=false;function render(){try{if(M==='dist'&&!dbg)return;if(!D.length)return;var b=el();
+if(M==='preview'){b.innerHTML='';var t=document.createElement('button');t.type='button';t.textContent='\u26a0 '+D.length;t.setAttribute('aria-label',D.length+' problems recorded; click for details');
+t.style.cssText='background:#3a1208;color:#ffe3d6;border:1px solid #ff9f7a;border-radius:999px;padding:3px 10px;cursor:pointer;font:inherit;opacity:.85';t.onclick=function(){open=!open;render();};b.appendChild(t);
+if(open){var l=document.createElement('div');l.style.cssText='margin-top:6px;background:#3a1208;color:#ffe3d6;border:1px solid #ff9f7a;border-radius:10px;padding:8px 10px;max-height:40vh;overflow:auto;font:12px/1.4 monospace;white-space:pre-wrap';l.textContent=D.map(function(d){return '\u26a0 '+d.m;}).join('\n');b.appendChild(l);}}
+else{b.textContent=D.map(function(d){return '\u26a0 '+d.m;}).join('\n');}}catch(e){}}
+function add(m){try{m=String(m).slice(0,300);D.push({t:Date.now(),m:m});if(D.length>100)D.shift();if(window.console&&console.warn)console.warn('[LangQuest] '+m);render();}catch(e){}}
+window.__lqDiagAdd=add;
+window.addEventListener('error',function(e){var t=e.target;if(t&&t!==window&&(t.src||t.href)){add('Failed to load '+String(t.src||t.href).split('/').pop().split('?')[0]);return;}
+add((e.message||'error')+(e.filename?' @ '+String(e.filename).split('/').pop()+':'+e.lineno:''));},true);
+window.addEventListener('unhandledrejection',function(e){var r=e.reason;add('Unhandled: '+(r&&(r.message||r)));});
+setTimeout(function(){var r=document.getElementById('root');if(!r||!r.firstChild)add('App not started after 15 s. Packs loaded: '+Object.keys(window.__lqPack||{}).join(', ')+'. app.js ran: '+(window.__lqBoot?'yes':'no'));},15000);
+if(/^https?:$/.test(location.protocol)){var k=document.createElement('link');k.rel='manifest';k.href='manifest.webmanifest';document.head.appendChild(k);}
+})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Language Quest — Spanish + Farsi adventure</title>
+<meta name="theme-color" content="#0f2a1d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="LangQuest"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css">
+</head><body>
+<div id="poster" style="position:fixed;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 30%,#2d6238,#0b1f15 70%);color:#fbefc8;font-family:Georgia,serif;text-align:center;z-index:0">
+<div><div style="width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:radial-gradient(circle,#fff 0 12%,#bfe9ff 30%,rgba(92,195,240,0) 70%)"></div>
+<div style="font-size:34px;letter-spacing:.06em">LANGUAGE QUEST</div><div style="opacity:.8;margin-top:8px;font-family:system-ui,sans-serif">Spanish · فارسی · a Hyrule adventure</div>
+<div style="opacity:.6;margin-top:22px;font-family:system-ui,sans-serif;font-size:14px">Loading…</div></div></div>
+<div id="root"></div>
+<noscript>Language Quest needs JavaScript.</noscript>
+<script src="app.js" defer></script>
+<script src="vocabpics/vocabpics_pack1.js" async></script>
+<script src="vocabpics/vocabpics_pack2.js" async></script>
+<script src="vocabpics/vocabpics_pack3.js" async></script>
+</body></html>
