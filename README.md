@@ -49,6 +49,13 @@ the top bar) and approve it with your PIN. Spend rupees in the Hyrule Market (th
 has the wallet settings, costs, ledger, weekly report and tickets. The shared module is `src/family-wallet.js`
 (copied unchanged; its own tests are in `tests/wallet/`).
 
+**Family Sync (optional, new in v7.2):** set things up once in the Family Hub on the grown-up's laptop (PIN, rewards
+and costs, look, AI key); his laptop connects once (the family link, or Parent corner → Settings → Family sync → the
+6-character code) and then gets those settings and sends his progress and a weekly summary. When connected, the family
+PIN opens the Parent corner, and Rewards, Look, PIN and the AI key show "Set in the Family Hub". A tiny "☁ synced" dot
+sits in the Parent corner header. Family voice recordings stay on his laptop. Not connected = exactly the app as
+before. The shared module is `src/family-sync.js` (copied unchanged; its tests and mock backend are in `tests/sync/`).
+
 **Secret Treasures:** 18 hidden Gold Skulltula tokens (golden beetles in the Starlit Grove look): 6 hidden things to find
 and 12 hero challenges (most of them in Spanish, including "Finish First Steps" and "Use Help and still finish a lesson").
 Each one gives +1 Courage shard in the Family Wallet. The House of Skulltula is the wallet's second tab.

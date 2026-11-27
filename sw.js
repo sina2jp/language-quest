@@ -1,7 +1,7 @@
 // Language Quest service worker: offline after the first load.
 // Precache with fresh requests (never from the browser's HTTP cache); the page and the app code are network-first with a
 // cache fallback, so an update can't get stuck on an old app.js; the big packs (kit, audio, vocabpics) are cache-first.
-const CACHE = 'langQuest-v6-275bbd24f7';
+const CACHE = 'langQuest-v7-67007c13a3';
 const PRE = ["./","index.html","app.js","app.css","manifest.webmanifest","vocabpics/vocabpics_pack1.js","vocabpics/vocabpics_pack2.js","vocabpics/vocabpics_pack3.js","kit/kitpack-1.js","kit/kitpack-2.js","kit/kitpack-3.js","icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/maskable-512.png","audio/fa-1.js","audio/fa-2.js","audio/fa-3.js","audio/fa-4.js","audio/fa-5.js","audio/fa-6.js","audio/fa-7.js","audio/fa-8.js","audio/fa-9.js","audio/fa-10.js"];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRE.map((f) => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith('langQuest-') && k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
