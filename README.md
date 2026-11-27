@@ -32,11 +32,26 @@ pictures and Farsi audio, also works from a file on disk; only "install as an ap
 `?debug=1` to the address shows the same list on screen. The kid's screens never show error messages.
 **AI partner:** Parent corner → AI partner → Save key or **Test key** picks the newest available fast (Haiku) model and shows it.
 
+**First Steps (Primeros pasos), new in v7:** the Spanish door now starts with "🌱 It's new to me" (the default) or
+"🧭 Test me". First Steps is one learning path of 16 tiny lessons (about 5 minutes, 3–4 new words or one chunk each) in
+6 mini-units with "I can" goals: greetings, please/thank you, how are you, my name, numbers 1–10, colors, pets, family,
+school things, food, me gusta, tengo ___ años, a review chat, and a champion celebration. Each lesson: 2 quick review
+items, meet the words (picture, audio, 🐢 slow, a gesture to do), listen and tap, match, say it (the mic is optional,
+Skip is always there), build it (type with letter tiles or tap "Choose instead"), a mini chat, and stars. The big
+**🧚 Help** button is always visible (hear it slowly → English → first letter or fewer choices → Type/Choose → the
+answer); after 2 misses the answer appears, and that counts as practice. The test can skip ahead; the Hyrule Field map
+and the units come after First Steps.
+
+**Family Wallet (shared with Math Arena, Code Quest and Music Quest on this browser):** Language Quest earns Courage
+shards (time spent learning, finished lessons and quests, bosses, comebacks, Gold Skulltulas) and shared rupees. A
+reward costs a full Triforce (by default 3 shards from each app); claim it in the Treasure Wallet (the mini Triforce in
+the top bar) and approve it with your PIN. Spend rupees in the Hyrule Market (the Shop button). Parent corner → Rewards
+has the wallet settings, costs, ledger, weekly report and tickets. The shared module is `src/family-wallet.js`
+(copied unchanged; its own tests are in `tests/wallet/`).
+
 **Secret Treasures:** 18 hidden Gold Skulltula tokens (golden beetles in the Starlit Grove look): 6 hidden things to find
-and 12 hero challenges (most of them in Spanish). Every 3 tokens (your setting) earn a Reward Ticket: he picks a real-world
-reward from your list and shows you the ticket; you approve it with your PIN. Parent corner → Rewards: edit the list,
-tokens per ticket, weekly cap (all apps together) and on/off. The list and tickets are shared with Math Arena and Code Quest
-on the same browser (localStorage `familyApps.rewards.v1` and `familyApps.tickets.v1`).
+and 12 hero challenges (most of them in Spanish, including "Finish First Steps" and "Use Help and still finish a lesson").
+Each one gives +1 Courage shard in the Family Wallet. The House of Skulltula is the wallet's second tab.
 
 ## What it teaches
 - **Spanish** (new language, Latin American by default, Spain optional): 20 units, 904 words + 300 phrases,
