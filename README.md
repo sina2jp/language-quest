@@ -42,14 +42,25 @@ Skip is always there), build it (type with letter tiles or tap "Choose instead")
 answer); after 2 misses the answer appears, and that counts as practice. The test can skip ahead; the Hyrule Field map
 and the units come after First Steps.
 
+**Graduation and fair treasure (new in v7.3): "New words = treasure. Repeats = practice."** A lesson, quest or level
+counts as PASSED at 80% or more without help (no misses, no Help button). Passing graduates it 🎓, and a graduated
+First Steps step can't be replayed from the path; its words come back in short, mixed reviews when they are due
+(the "⭐ Review time" button). Treasure is paid once per thing learned: 2 Courage shards when a whole First Steps
+group is graduated (not per 5-minute step), 1 per third of a unit's words learned in a passing quest, 3 for beating a
+boss the first time (the boss can only be beaten in a passing quest), 1 for a finished owl story and 1 for each due
+review passed. Rupees come from the first correct answer per word (once in 30 days). The Family Hub's daily lesson-shard
+cap (default 6 per app) applies; extra shards are saved for the next day, never lost. Not-yet-started First Steps steps
+have a "⚡ Test out" link (80% graduates the step without the lesson). To let him replay graduated lessons for practice
+(no treasure), turn on Parent corner → Settings → "Practice replays".
+
 **Family Wallet (shared with Math Arena, Code Quest and Music Quest on this browser):** Language Quest earns Courage
-shards (time spent learning, finished lessons and quests, bosses, comebacks, Gold Skulltulas) and shared rupees. A
+shards (time spent learning, passed lessons and quests, first boss wins, due reviews, hero challenges) and shared rupees. A
 reward costs a full Triforce (by default 3 shards from each app); claim it in the Treasure Wallet (the mini Triforce in
 the top bar) and approve it with your PIN. Spend rupees in the Hyrule Market (the Shop button). Parent corner → Rewards
 has the wallet settings, costs, ledger, weekly report and tickets. The shared module is `src/family-wallet.js`
 (copied unchanged; its own tests are in `tests/wallet/`).
 
-**Family Sync (optional, new in v7.2):** set things up once in the Family Hub on the grown-up's laptop (PIN, rewards
+**Family Sync (optional, v7.2; several laptops since v7.3):** set things up once in the Family Hub on the grown-up's laptop (PIN, rewards
 and costs, look, AI key); his laptop connects once (the family link, or Parent corner → Settings → Family sync → the
 6-character code) and then gets those settings and sends his progress and a weekly summary. When connected, the family
 PIN opens the Parent corner, and Rewards, Look, PIN and the AI key show "Set in the Family Hub". A tiny "☁ synced" dot
@@ -58,7 +69,8 @@ before. The shared module is `src/family-sync.js` (copied unchanged; its tests a
 
 **Secret Treasures:** 18 hidden Gold Skulltula tokens (golden beetles in the Starlit Grove look): 6 hidden things to find
 and 12 hero challenges (most of them in Spanish, including "Finish First Steps" and "Use Help and still finish a lesson").
-Each one gives +1 Courage shard in the Family Wallet. The House of Skulltula is the wallet's second tab.
+Each hero challenge gives +1 Courage shard once; a hidden find gives 10 rupees (finding things isn't learning, so no
+shards). The House of Skulltula is the wallet's second tab.
 
 ## What it teaches
 - **Spanish** (new language, Latin American by default, Spain optional): 20 units, 904 words + 300 phrases,
